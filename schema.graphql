@@ -1,0 +1,24 @@
+type Owner @entity {
+  "Account address"
+  id: ID!
+  vaults: [Vault!] @derivedFrom(field: "owner")
+}
+
+type Vault @entity {
+  "Vault number"
+  id: ID!
+  owner: Owner!
+  #tvl: BigInt!
+  actions: [VaultAction!] @derivedFrom(field: "vault")
+}
+
+type VaultAction @entity {
+  "Extrinsic hash"
+  id: ID!
+  vault: Vault!
+  #tvl: BigInt!
+  timestamp: String!
+  date: DateTime!
+  type: String!
+  content: String!
+}

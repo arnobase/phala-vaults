@@ -1,0 +1,14 @@
+{
+  "outDir": "src/types",
+  "specVersions": "https://khala.archive.subsquid.io/graphql",
+  "events": [
+    "PhalaVault.VaultCommissionSet",
+    "PhalaVault.OwnerSharesGained",
+    "PhalaVault.OwnerSharesClaimed",
+    "PhalaVault.PoolCreated"
+  ],
+  "calls": [ 
+  ],
+  "storage": [
+  ]
+}
